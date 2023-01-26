@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Movietheater {
 
     public static void main(String[] args) {
+        int count=0;
         int[][] seats = {
                 {0, 0, 0, 1, 1, 1, 0, 0, 1, 1},
                 {1, 1, 0, 1, 0, 1, 1, 0, 0, 0},
@@ -21,6 +22,15 @@ public class Movietheater {
         } else {
             System.out.println("Sold");
         }
+
+        for(int x=0; x<seats.length; x++){
+            for(int y=0; y<seats[x].length; y++){
+            if(seats[x][y] == 0) {
+                count++;
+            }
+            }
+        }
+        System.out.println("There are still "+count + " seat(s) available!");
     }
 
 }
